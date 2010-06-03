@@ -1,3 +1,45 @@
-Django DJ
+Django DJ - online IDE for Django Framework
 
-README will be here soon
+---
+Beforehand I want to apologize for my English knowledge.
+If you see mistakes in my English texts please correct me
+by mail or by editing project source files.
+
+Russian Django DJ pages available at: http://anisimov.org/dj/
+---
+
+1. Real functions
+
+2. Planned functions
+
+3. Install
+
+	a. Copy 'dj' files to your project folder
+
+	b. Copy/symlink dj/media -> www/media/dj (where www/media is folder with mediafiles)
+	   Web-location /media/dj is hardcoded meanwhile.
+
+	c. Add application 'dj' to INSTALLED_APPS section of settings.py
+
+	d. Add DJ_PREFIX/DJ_PASSWORD/DJ_PROJECTS settings to end of settings.py file:
+
+---cut
+DJ_PREFIX = 'dj' # Default value
+
+DJ_PASSWORD = 'mysuperstrongpassword' # Don't forget to change this!
+
+DJ_PROJECTS = [
+    { 'id': '1', 'title': 'My project title', 'path': u'/hosts/myproject.com/', 'exclude': (
+        'www/media/dj',
+        'django/dj/media',
+        'www/media/admin',
+    ),  },
+]
+---end cut
+
+	e. Add a line to urls.py: (r'^dj/', include('dj.urls')),
+	   Begin of DJ url can be changed in DJ_PREFIX variable.
+
+---
+Vyacheslav V. Anisimov
+http://anisimov.org/
