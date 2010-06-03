@@ -6,11 +6,32 @@ If you see mistakes in my English texts please correct me
 by mail or by editing project source files.
 
 Russian Django DJ pages available at: http://anisimov.org/dj/
+
+International discussion about DJ can be found at:
+http://groups.google.com/group/django-dj
 ---
 
 1. Real functions
 
+	a. Project browser with exclude ability
+
+	b. Code editor with syntax highlighting (via CodeMirror)
+
+	c. Source file backup before writing
+
 2. Planned functions
+
+	a. Read/write projects via FTP
+
+	b. Template for login page
+
+	c. File upload functions
+
+	---- Finish wanted functions
+
+	z. Form-based special editors for any kind of django files such as
+	   admin.py, models.py, settings.py, urls.py etc. DJ will be a
+	   _visual_ IDE.
 
 3. Install
 
