@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+    <link rel="stylesheet" type="text/css" href="/media/dj/styles.css" />
+    <title>{{ title }}{% block title %} - DJ{% endblock %}</title>
+    <script src="/media/dj/codemirror/js/codemirror.js" type="text/javascript"></script> 
+    <script src="/media/dj/jquery/jquery-latest.js" type="text/javascript"></script> 
+    <script src="/media/dj/dj.js" type="text/javascript"></script> 
+</head>
+
+<body>
+
+<div class="top"><p>
+{% if projects %}
+Django DJ v.0.1 
+{% for p in projects %}
+<a href="{% url dj %}?p={{p.id}}"{% ifnotequal curproject 'none' %}{% ifequal curproject p.id %} class="current"{% endifequal %}{% endifnotequal %}>{{p.title}}</a>
+{% endfor %}
+{% else %}
+Projects are not defined
+{% endif %}
+</p></div>
+
+<div class="left">
+{% if files %}
+<div class="files">{{ files|safe }}</div>
+{% endif %}
+</div>
+
+<div class="right">
+{% if right %}{{ right|safe }}{% endif %}
+</div>
+
+<div class="bottom">
+<p id="statusbar"><a href="http://anisimov.org/dj/">Django DJ</a> &copy; 2010 by Vyacheslav V. Anisimov and some others.</p>
+</div>
+    
+</body></html>

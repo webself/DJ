@@ -1,0 +1,35 @@
+body { background-color: #fff; font-family:"Trebuchet MS",sans-serif;  }
+body,p,h1,h2,h3,ul,ol,li { padding:0; margin:0; }
+
+div.top { height:39px; position: absolute; top:0px; left:0px; right:0px; overflow: hidden; 
+    border-bottom:1px solid #eee; }
+div.top p { padding:8px 0px 0px 10px;  }
+div.top p a { padding:2px 4px; background-color:#eee; text-decoration:none; color:#333; }
+div.top p a.current { background-color:#3a3; color:#fff; }
+
+div.left { width:200px; overflow: auto; top:40px; left:0px; bottom:20px; position: absolute;}
+div.right { left:200px; right:0px; top:40px; bottom:20px; position: absolute; overflow: auto; }
+div.bottom { height:20px; overflow: hidden;  bottom:0px; left:0px; right:0px; position: absolute; background-color:#eee; }
+div.bottom p { font-size:12px; padding:0px 10px; }
+
+textarea#codemirror { position:absolute; top:0px; bottom:0px; display:none; }
+
+div.files { padding-top:5px; }
+div.files ul { padding-left:10px; }
+div.files ul li { list-style-type: none; 22padding:2px 0px; font-size:13px; }
+div.files ul li img { position:relative; top:4px; }
+div.files ul li a { color:#333; text-decoration:none; border-bottom:dotted 1px #aaa; }
+div.files ul li a:hover { border-color:#333; }
+div.files ul li.current a { color:#3a3; border-color:#3a3; }
+
+
+.CodeMirror-line-numbers { width: 2.2em; color: #aaa; background-color: #eee; text-align: right; padding: .4em;
+    margin: 0; font-family: monospace; font-size: 10pt; line-height: 1.1em; }
+
+table.dj { width:100%; height:100%; background-color:#abc;}
+table.dj td { vertical-align: top; }
+table.dj td.top { background-color:#600; }
+table.dj td.bottom { background-color:#600; } ///aadd 
+
+
+
